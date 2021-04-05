@@ -11,6 +11,7 @@ Libraries required:
 - pyTrends
 
 On backlog:
+- Allowing input of specific date ranges
 - Adding visualisation 
 - Make analysis available for more than 5 keywords
 
