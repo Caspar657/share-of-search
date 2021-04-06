@@ -1,5 +1,7 @@
 import pandas as pd 
 import pytrends
+from matplotlib import pyplot
+import seaborn as sns
 
 
 def share_of_search(kw_list):
@@ -40,3 +42,11 @@ def share_of_search(kw_list):
         share_search_df = share_search(total_df)
 
         return share_search_df
+
+# visualising data
+
+a4_dims = (11.7, 8.27)
+fig, ax = pyplot.subplots(figsize=a4_dims)
+
+sns.set_style("darkgrid")
+sns.lineplot(data=share_search_df)
