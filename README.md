@@ -14,5 +14,5 @@ Libraries required:
 
 On backlog:
 - Fixing bug that happens when date ranges are closer than 5 years apart
-- - Make analysis available for more than 5 keywords
+- Make analysis available for more than 5 keywords
 
