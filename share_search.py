@@ -3,8 +3,9 @@ import pytrends
 from matplotlib import pyplot
 import seaborn as sns
 
-
-def share_of_search(kw_list):
+# enter in keyword list as a list, start date and end date as strings formatted as YYYY-MM-DD. 
+# WARNING: weird things will happen if the start and end dates are less than 5 years apart. 
+def share_of_search(kw_list, start_date, end_date):
 
         def calculate_rolling(df): #calculate 12 month rolling average of search index
             columns = list(df) #create list of column names
@@ -31,7 +32,7 @@ def share_of_search(kw_list):
         #query Google Trends
         from pytrends.request import TrendReq
         pytrends = TrendReq(hl='en-US', tz = 600)
-        pytrends.build_payload(kw_list, cat=0, timeframe='all', geo='AU', gprop='')
+        pytrends.build_payload(kw_list, cat=0, timeframe=start_date + " " + end_date, geo='AU', gprop='')
 
         df = pytrends.interest_over_time()
         df = df.drop(columns = 'isPartial') #remove extra column
