@@ -9,6 +9,8 @@ Libraries required:
 
 - pandas
 - pyTrends
+- matplotlib
+- seaborn
 
 On backlog:
 - Allowing input of specific date ranges
